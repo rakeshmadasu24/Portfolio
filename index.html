@@ -4,121 +4,145 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rakesh Madasu | Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
-<body>
 
-  <!-- 🌐 NAVBAR -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Rakesh <span>Dev</span></div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="menu-toggle">&#9776;</div>
-      <button class="theme-toggle" id="themeToggle">☀️</button>
+<body data-bs-theme="dark">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Rakesh <span>Dev</span></a>
+      <button class="navbar-toggler text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle" class="btn ms-3">☀️</button>
+      </div>
+    </div>
+  </nav>
 
-    </nav>
-  </header>
-
-  <!-- 🏠 HOME -->
-  <section id="home" class="section home">
-    <div class="content">
+  <!-- HOME -->
+  <section id="home" class="d-flex align-items-center justify-content-center text-center">
+    <div class="container reveal">
       <h1>Hello, I'm <span>Rakesh Madasu</span></h1>
-      <p> Full Stack Developer | Problem Solver | Learner</p><br>
-      <a href="#projects" class="btn">View My Work</a>
+      <p class="lead">Full Stack Developer | Problem Solver | Learner</p>
+      <a href="#projects" class="btn btn-primary mt-3">View My Work</a>
     </div>
   </section>
 
-  <!-- 👨‍💻 ABOUT -->
-  <section id="about" class="section about">
-    <h2>About Me</h2>
-    <p>
-     I’m Rakesh Madasu, a dedicated Full Stack Developer skilled in both Java and .NET technologies. I have hands-on experience developing end-to-end web applications using 
-     Spring Boot, ASP.NET Core MVC, MySQL, and SQL Server, along with modern front-end tools like HTML, CSS, JavaScript, and Angular.
-
-I’ve built and deployed real-world projects such as a Hotel Management System, EasyPay Recharge Portal, and a Task Management Application, 
-focusing on clean architecture, secure APIs, and responsive design. I’m passionate about learning new technologies, solving complex problems, and building efficient, scalable software solutions.</p>
-  </section>
-
-  <!-- ⚙️ SKILLS -->
-  <section id="skills" class="section skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <div class="skill">Java</div>
-      <div class="skill">Spring Boot</div>
-      <div class="skill">MySQL</div>
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Angular</div>
-      <div class="skill">.Net</div> 
-      <div class="skill">C#</div>
-      <div class="skill">Sql Server</div>
-      <div class="skill">OOPs</div>
+  <!-- ABOUT -->
+  <section id="about" class="text-center reveal">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="mx-auto" style="max-width: 800px;">
+        I’m Rakesh Madasu, a dedicated Full Stack Developer skilled in both Java and .NET technologies.
+        I have hands-on experience developing end-to-end web applications using Spring Boot, ASP.NET Core MVC,
+        MySQL, and SQL Server, along with modern front-end tools like HTML, CSS, JavaScript, and Angular.
+      </p>
+      <p class="mx-auto" style="max-width: 800px;">
+        I’ve built and deployed real-world projects such as a Hotel Management System, EasyPay Recharge Portal,
+        and a Task Management Application, focusing on clean architecture, secure APIs, and responsive design.
+      </p>
     </div>
   </section>
 
-  <!-- 💼 PROJECTS -->
-  <section id="projects" class="section projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Hotel Management System</h3>
-        <p>The Hotel Management System is a web-based application designed to manage hotel operations such as room bookings, guest check-ins, and reservations. It features secure admin login,
-           role-based access control, and real-time room availability tracking. Developed using Spring Boot, Spring Security, Thymeleaf, and MySQL,
-           it ensures efficient and automated hotel management.</p>
-      </div>
-      <div class="project-card">
-        <h3>Task Management System</h3>
-        <p>The Task Management System is a full-stack web application that helps users create, assign, and track daily tasks efficiently. It allows users to set priorities,
-           update task status, and monitor progress through a 
-          clean and interactive interface. Built with .NET Core MVC, Entity Framework, and SQL Server, it streamlines team productivity and task organization.</p>
-      </div>
-      <div class="project-card">
-        <h3>EasyPay Web Application</h3>
-        <p>The EasyPay Web Application is an online platform for seamless mobile recharges, bill payments. 
-          It enables users to register, log in, make payments securely, and view transaction history. 
-          Built using Java Servlets, JSP, JDBC, and MySQL, it provides a user-friendly interface and efficient backend for reliable digital payments.</p>
+  <!-- SKILLS -->
+  <section id="skills" class="text-center reveal">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3"><div class="skill-box">Java</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">Spring Boot</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">MySQL</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">HTML</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">CSS</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">JavaScript</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">Angular</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">.NET</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">C#</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">SQL Server</div></div>
+        <div class="col-6 col-md-3"><div class="skill-box">OOPs</div></div>
       </div>
     </div>
   </section>
 
-  <!-- 📞 CONTACT -->
-<section id="contact" class="section contact">
-  <h2>Contact</h2>
-  <p class="contact-intro">
-    I'd love to connect! Feel free to reach out via email or connect with me on LinkedIn and GitHub.
-  </p>
+  <!-- PROJECTS -->
+  <section id="projects" class="text-center reveal">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="row g-5">
+        <div class="col-md-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Hotel Management System</h5>
+              <p class="card-text">
+                A web-based app managing hotel operations like bookings and check-ins. Built using Spring Boot, Thymeleaf, and MySQL with secure login and role-based access.
+              </p>
+              <a href="https://github.com/rakeshmadasu24/hotel-management-system" target="_blank" class="btn btn-outline-primary">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Task Management System</h5>
+              <p class="card-text">
+                A .NET Core MVC app to track and assign tasks. Uses Entity Framework and SQL Server for seamless task management with interactive UI.
+              </p>
+              <a href="https://github.com/rakeshmadasu24/task-management-system" target="_blank" class="btn btn-outline-primary">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">EasyPay Web Application</h5>
+              <p class="card-text">
+                Online platform for mobile recharges and bill payments. Built using Java Servlets, JSP, and MySQL with secure login and transaction tracking.
+              </p>
+              <a href="https://github.com/rakeshmadasu24/easypay-webapp" target="_blank" class="btn btn-outline-primary">
+                <i class="fab fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="contact-info">
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:rakeshmadasu24@gmail.com">rakeshmadasu24@gmail.com</a>
+  <!-- CONTACT -->
+  <section id="contact" class="text-center reveal">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="lead">Let’s connect! Reach out via email or social links below:</p>
+      <p><i class="fas fa-envelope text-primary me-2"></i><a href="mailto:rakeshmadasu24@gmail.com">rakeshmadasu24@gmail.com</a></p>
+      <p><i class="fab fa-linkedin text-primary me-2"></i><a href="https://www.linkedin.com/in/rakeshmadasu" target="_blank">linkedin.com/in/rakeshmadasu</a></p>
+      <p><i class="fab fa-github text-primary me-2"></i><a href="https://github.com/rakeshmadasu24" target="_blank">github.com/rakeshmadasu24</a></p>
+      <p><i class="fas fa-phone text-primary me-2"></i>+91 6301102321</p>
     </div>
-    <div class="contact-item">
-      <i class="fab fa-linkedin"></i>
-      <a href="https://www.linkedin.com/in/rakeshmadasu" target="_blank">linkedin.com/in/rakeshmadasu</a>
-    </div>
-    <div class="contact-item">
-      <i class="fab fa-github"></i>
-      <a href="https://github.com/rakeshmadasu24" target="_blank">github.com/rakeshmadasu24</a>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-phone-alt"></i>
-      <span>+91 6301102321</span>
-    </div>
-  </div>
-</section>
+  </section>
 
-  <footer>
+  <footer class="text-center py-3 bg-black text-light">
     <p>© 2025 Rakesh Madasu | All Rights Reserved</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
